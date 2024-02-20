@@ -1,0 +1,12 @@
+{
+  "name": "hardhat-verify-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:renlulu/hardhat-verify-sample.git",
+  "author": "xiaohuo <xiaohuo200@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.1"
+  }
+}
