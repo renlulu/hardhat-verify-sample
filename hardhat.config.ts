@@ -20,6 +20,18 @@ const config: HardhatUserConfig = {
       url: process.env.MUSTER_URL || 'https://muster-anytrust.alt.technology',
       accounts: [process.env.PRIVATE_KEY || ''],
     },
+    musterMainnet: {
+      url: process.env.MUSTER_URL || 'https://muster.alt.technology',
+      accounts: [process.env.PRIVATE_KEY || ''],
+    },
+    opDemo: {
+      url: process.env.OPDEMO_URL || 'https://op-demo.alt.technology',
+      accounts: [process.env.PRIVATE_KEY || ''],
+    },
+    form: {
+      url: process.env.OPDEMO_URL || 'https://form-testnet.alt.technology',
+      accounts: [process.env.PRIVATE_KEY || ''],
+    }
   },
   etherscan: {
     // Your API key for Etherscan
@@ -27,6 +39,9 @@ const config: HardhatUserConfig = {
     apiKey: {
       pop: "abc",
       muster: 'abc',
+      musterMainnet: 'abc',
+      opDemo: 'abc',
+      form: 'abc'
     },
     customChains: [
       {
@@ -37,6 +52,30 @@ const config: HardhatUserConfig = {
           browserURL: 'https://muster-anytrust-explorer-v2.alt.technology',
         },
       },
+      {
+        network: 'musterMainnet',
+        chainId: 4078,
+        urls: {
+          apiURL: 'https://muster-explorer.alt.technology/api',
+          browserURL: 'https://muster-explorer.alt.technology',
+        },
+      },
+      {
+        network: 'opDemo',
+        chainId: 20240219,
+        urls: {
+          apiURL: 'https://op-demo-explorer.alt.technology/api',
+          browserURL: 'https://op-demo-explorer.alt.technology',
+        }
+      },
+      {
+        network: 'form',
+        chainId: 27182,
+        urls: {
+          apiURL: 'https://form-testnet-explorer.alt.technology/api',
+          browserURL: 'https://form-testnet-explorer.alt.technology',
+        }
+      }
     ]
   }
 };
